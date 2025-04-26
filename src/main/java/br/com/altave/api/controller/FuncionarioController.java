@@ -3,7 +3,9 @@ package br.com.altave.api.controller;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -168,4 +170,14 @@ public class FuncionarioController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+
+    @Autowired
+    private FuncionarioService funcionarioService;
+
+    @GetMapping("/por-empresa")
+    public ResponseEntity<Map<String, Long>> getFuncionariosPorEmpresa() {
+        Map<String, Long> dados = funcionarioService.getFuncionariosPorEmpresa();
+        return ResponseEntity.ok(dados);
+    }
+    
 }

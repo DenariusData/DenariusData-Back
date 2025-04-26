@@ -5,9 +5,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -90,5 +93,21 @@ public class FuncionarioService {
     // Deletar um funcionário
     public void deletar(Long id) {
         repository.deleteById(id);
+    }
+
+     @Autowired
+    private FuncionarioRepository funcionarioRepository;
+
+    public Map<String, Long> getFuncionariosPorEmpresa() {
+        List<Object[]> resultados = funcionarioRepository.countFuncionariosPorEmpresa();
+        Map<String, Long> mapa = new HashMap<>();
+
+        for (Object[] resultado : resultados) {
+            String empresa = (String) resultado[0];
+            Long quantidade = (Long) resultado[1];
+            mapa.put(empresa, quantidade);
+        }
+
+        return mapa;
     }
 }
