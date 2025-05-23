@@ -4,6 +4,26 @@ Seja bem-vindo ao Backend do projeto **Altime**, uma solução voltada à gestã
 
 > Aplicação desenvolvida por alunos do 3º semestre do tecnólogo em Banco de Dados, na FATEC Profº Jessen Vidal - São José dos Campos, SP.
 
+</div>
+
+### :gear: Como utilizar
+
+Siga os passos abaixo para executar o projeto localmente:
+
+bash
+# Clone este repositório
+$ git clone https://github.com/DenariusData/DenariusData-Back.git
+
+# Execute a aplicação (usando Maven ou sua IDE)
+$ ./mvnw spring-boot:run
+
+
+O servidor será iniciado localmente na porta configurada no arquivo .env ou application.properties. Utilize ferramentas como Swagger ou Postman para realizar requisições à API.
+
+## :railway_track: Rotas disponíveis
+
+> A documentação das rotas está disponível via Swagger no endpoint /swagger-ui.html, após o servidor ser iniciado.
+
 <span id="tecnologias">
 
 ## 🛠️ Tecnologias
