@@ -57,7 +57,7 @@ A estrutura do backend manteve-se consistente, mas com novos arquivos e melhoria
 
 Toda a documentação das rotas e endpoints está disponível através do **Swagger**, após inicialização do backend:  
 
-**➡️ `/swagger-ui.html`**
+**➡️ `http://localhost:8080/swagger-ui/index.html`**
 
 ---
 
