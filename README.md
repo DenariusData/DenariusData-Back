@@ -1,3 +1,4 @@
+
 <h1 align="center">Serviço Backend Altime</h1>
 
 Seja bem-vindo ao Backend do projeto **Altime**, uma solução voltada à gestão de horários e produtividade para ambientes acadêmicos ou corporativos. Seu propósito é fornecer suporte completo ao funcionamento do sistema, oferecendo endpoints para usuários, sessões, dados de agenda e afins.
@@ -10,21 +11,61 @@ Seja bem-vindo ao Backend do projeto **Altime**, uma solução voltada à gestã
 
 Siga os passos abaixo para executar o projeto localmente:
 
-bash
+```bash
 # Clone este repositório
 $ git clone https://github.com/DenariusData/DenariusData-Back.git
 
 # Execute a aplicação (usando Maven ou sua IDE)
 $ ./mvnw spring-boot:run
+```
 
-
-O servidor será iniciado localmente na porta configurada no arquivo .env ou application.properties. Utilize ferramentas como Swagger ou Postman para realizar requisições à API.
+O servidor será iniciado localmente na porta configurada no arquivo `.env` ou `application.properties`. Utilize ferramentas como Swagger ou Postman para realizar requisições à API.
 
 ## :railway_track: Rotas disponíveis
 
-> A documentação das rotas está disponível via Swagger no endpoint /swagger-ui.html, após o servidor ser iniciado.
+> A documentação completa da API está disponível via Swagger após iniciar o servidor:  
+> [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
-<span id="tecnologias">
+<div align="center">
+
+
+| Método | Rota                                 | Descrição                         |
+|--------|-------------------------------------|----------------------------------|
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /contratos                        | Listar todos os contratos        |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /contratos/{id}                  | Obter contrato por ID            |
+| ![](https://img.shields.io/badge/POST-49cc91?style=for-the-badge)   | /contratos                      | Criar novo contrato              |
+| ![](https://img.shields.io/badge/PUT-fca030?style=for-the-badge)    | /contratos/{id}                 | Atualizar contrato por ID        |
+| ![](https://img.shields.io/badge/DELETE-fa3e3e?style=for-the-badge) | /contratos/{id}                 | Remover contrato por ID          |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /cargo                          | Listar todos os cargos           |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /cargo/{id}                    | Obter cargo por ID               |
+| ![](https://img.shields.io/badge/POST-49cc91?style=for-the-badge)   | /cargo                         | Criar novo cargo                 |
+| ![](https://img.shields.io/badge/PUT-fca030?style=for-the-badge)    | /cargo/{id}                    | Atualizar cargo por ID           |
+| ![](https://img.shields.io/badge/DELETE-fa3e3e?style=for-the-badge) | /cargo/{id}                    | Remover cargo por ID             |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/registro                  | Listar todos os registros        |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/registro/{id}             | Obter registro por ID            |
+| ![](https://img.shields.io/badge/POST-49cc91?style=for-the-badge)   | /api/registro                 | Criar novo registro              |
+| ![](https://img.shields.io/badge/PUT-fca030?style=for-the-badge)    | /api/registro/{id}            | Atualizar registro por ID        |
+| ![](https://img.shields.io/badge/DELETE-fa3e3e?style=for-the-badge) | /api/registro/{id}            | Remover registro por ID          |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/funcionarios             | Listar todos os funcionários     |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/funcionarios/{id}        | Obter funcionário por ID         |
+| ![](https://img.shields.io/badge/POST-49cc91?style=for-the-badge)   | /api/funcionarios             | Criar novo funcionário           |
+| ![](https://img.shields.io/badge/PUT-fca030?style=for-the-badge)    | /api/funcionarios/{id}        | Atualizar funcionário por ID     |
+| ![](https://img.shields.io/badge/DELETE-fa3e3e?style=for-the-badge) | /api/funcionarios/{id}        | Remover funcionário por ID       |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/funcionarios/{id}/imagem | Obter imagem do funcionário      |
+| ![](https://img.shields.io/badge/POST-49cc91?style=for-the-badge)   | /api/funcionarios/{id}/imagem | Enviar imagem para funcionário   |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/funcionarios/uploads/{filename} | Baixar imagem pelo nome     |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/funcionarios/por-empresa  | Listar funcionários por empresa  |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/empresa                  | Listar todas as empresas         |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/empresa/{cnpj}           | Obter empresa por CNPJ           |
+| ![](https://img.shields.io/badge/POST-49cc91?style=for-the-badge)   | /api/empresa                  | Criar nova empresa               |
+| ![](https://img.shields.io/badge/PUT-fca030?style=for-the-badge)    | /api/empresa/{cnpj}           | Atualizar empresa por CNPJ       |
+| ![](https://img.shields.io/badge/DELETE-fa3e3e?style=for-the-badge) | /api/empresa/{cnpj}           | Remover empresa por CNPJ         |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/dashboard/horas-trabalhadas | Visualizar total de horas trabalhadas |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/dashboard/funcionarios   | Visualizar dados de funcionários |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/dashboard/funcionarios-por-empresa | Quantidade de funcionários por empresa |
+| ![](https://img.shields.io/badge/GET-61b0ff?style=for-the-badge)    | /api/dashboard/empresas       | Dados consolidados de empresas   |
+
+</div>
 
 ## 🛠️ Tecnologias
 
@@ -40,12 +81,6 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
 ![Jira](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)
 ![Google_Docs](https://img.shields.io/badge/Google%20Docs-CED4DA?style=for-the-badge&logo=google-docs&logoColor=0D96F6)
 ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
-
-</span>
-
-## :railway_track: Rotas disponíveis
-
-> A documentação das rotas está disponível via Swagger no endpoint `/swagger-ui.html`, após o servidor ser iniciado.
 
 ## :file_folder: Explicação da estrutura das pastas
 
