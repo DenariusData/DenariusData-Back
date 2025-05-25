@@ -57,7 +57,7 @@ A seguir, apresentamos a organização das pastas e arquivos mais importantes de
 
 A documentação completa das rotas desta sprint pode ser acessada via **Swagger**, após a aplicação ser iniciada:  
 
-**➡️ `/swagger-ui.html`**
+**➡️ `http://localhost:8080/swagger-ui/index.html`**
 
 ---
 
